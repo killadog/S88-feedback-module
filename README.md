@@ -55,13 +55,13 @@
 <img src="img/dr4088rb_cs_liggend_laag_vooraf1.png" width="450">
 </p>
 
-3. s88 module
+3. S88 module
 
 <p align="center">
 <img src="img/s88.JPG" width="450">
 </p>
 
-4. Соеденить `Roco z21` с `DR4088RB-CS` с помощью `6-ти жильного кабеля`
+4. Соеденить `Roco z21` и `DR4088RB-CS` с помощью `6-ти жильного кабеля`
 
     |S88|RJ-45|Arduino|Описание|
     |:---:|:---:|:---:| --- |
@@ -72,7 +72,7 @@
     | 5   | 7   | 12  | Reset (**not used**  in Arduino - pin 12 used as DATA IN from previous DATA OUT |
     | 6   | 1   | 5V  | V+ (Arduino 5V) |
 
-5. Нажать кнопку `DR4088 S88` **два раза**:
+5. Нажать кнопку `DR4088RB-CS` **два раза**:
 
     Светодиод `Green` (Programming indication) переходит в режим индикаци:
     ```
@@ -88,7 +88,7 @@
 <img src="img/Rocrail_R-BUS.png" width="450">
 </p>
 
-6. Соеденить `DR4088RB-CS` с `S88 модулем` `ethernet кабелем`.
+6. Соеденить `DR4088RB-CS` и `S88 модуль` прямым RJ-45 кабелем.
 
 ## Пример адресации
 
