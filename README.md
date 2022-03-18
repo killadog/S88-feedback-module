@@ -1,7 +1,7 @@
 # S88-feedback-module
 16 channel S88 feedback module
 
-16-ти канальный модуль обратной связи на шине S88 для DCC железнодорожного моделизма
+16-ти канальный модуль обратной связи на шине S88 для DCC модели железной дороги
 
 <p align="center">
 <img src="img/s88.JPG" width="450">
@@ -37,6 +37,15 @@
 <img src="img/s88_feedback_layout.PNG" width="450">
 </p>
 
+|S88|RJ-45|Arduino|Описание|
+|:---:|:---:|:---:| --- |
+| 1   | 2   | 13  | Data OUT |
+| 2   | 3,5 | GND | GND |
+| 3   | 4   | 2   | Clock |
+| 4   | 6   | 3   | PS  |
+| 5   | 7   | 12  | Reset (**not used**  in Arduino - pin 12 used as `DATA IN` from previous `DATA OUT` |
+| 6   | 1   | 5V  | V+ (Arduino 5V) |
+
 ## Подключение и настройка
 
 `Roco z21` :arrow_backward: `DR4088RB-CS` :arrow_backward: `s88 module`
@@ -61,16 +70,7 @@
 <img src="img/s88.JPG" width="450">
 </p>
 
-4. Соеденить `Roco z21` и `DR4088RB-CS` с помощью `6-ти жильного кабеля`
-
-    |S88|RJ-45|Arduino|Описание|
-    |:---:|:---:|:---:| --- |
-    | 1   | 2   | 13  | Data OUT |
-    | 2   | 3,5 | GND | GND |
-    | 3   | 4   | 2   | Clock |
-    | 4   | 6   | 3   | PS  |
-    | 5   | 7   | 12  | Reset (**not used**  in Arduino - pin 12 used as DATA IN from previous DATA OUT |
-    | 6   | 1   | 5V  | V+ (Arduino 5V) |
+4. Соеденить `Roco z21` и `DR4088RB-CS` с помощью 6-ти жильного кабеля стандарта RJ-25 с разъёмами [6P6C](https://en.wikipedia.org/wiki/Modular_connector#6P6C).
 
 5. Нажать кнопку `DR4088RB-CS` **два раза**:
 
@@ -88,11 +88,12 @@
 <img src="img/Rocrail_R-BUS.png" width="450">
 </p>
 
-6. Соеденить `DR4088RB-CS` и `S88 модуль` прямым RJ-45 кабелем.
+6. Соединить `DR4088RB-CS` и `S88 модуль` прямым 8-ми жильным кабелем обжатым по стандарту T568A или T568B разъёмами [8P8C](https://en.wikipedia.org/wiki/Modular_connector#8P8C) (вообще такой кабель зовётся обычным `патч-кордом`).
 
+7. Используя `R-BUS Status` в [Z21 Maintance Tool](https://www.z21.eu/en/products/z21-maintenance-tool) и замыкая контакты модуля проверить работоспособность
 ## Пример адресации
 
-Для второго добавленного декодера с модулями 3 и 4
+Для второго добавленного модуля с номерами 3 и 4
 
 | Модуль №   | Arduino | Rocrail |
 | :---: |:---: |:---: |
